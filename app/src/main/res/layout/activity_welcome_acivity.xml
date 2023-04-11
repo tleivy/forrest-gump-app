@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@drawable/forrest_bench_art" >
+
+    <TextView
+        android:id="@+id/welcome_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="start"
+        android:text="@string/run_forrest"
+        android:fontFamily="@font/western"
+        android:textSize="65sp"
+        android:textColor="@color/forrest_art_pink"
+        android:layout_marginTop="50dp"/>
+
+
+
+</LinearLayout>
