@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="forrest_art_pink">#e82c8d</color>
+    <color name="blue_complement">#b6f1c3</color>
+    <color name="offwhite">#FAF9F6</color>
+
 </resources>
