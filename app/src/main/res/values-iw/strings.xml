@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Forrest Gump</string>
+    <string name="my_name_is">My name is Forrest, Forrest Gump</string>
+    <string name="run_forrest">Run Forrest, run!</string>
+    <string name="creator">Tomer Leivy</string>
+</resources>
