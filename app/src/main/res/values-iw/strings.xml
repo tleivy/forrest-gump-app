@@ -4,4 +4,20 @@
     <string name="my_name_is">My name is Forrest, Forrest Gump</string>
     <string name="run_forrest">Run Forrest, run!</string>
     <string name="creator">Tomer Leivy</string>
+    <string name="about">פורסט גאמפ הוא סרט מדהים שיקח אתכם למסך בלתי נשכח בחייו של אדם פשוט עם לב גדול.
+    אתם תצחקו, תבכו ותעודדו את פורסט כאשר הוא מנווט בין האתגרים והנצחונות הרבים של החיים,
+    תוך כדי הפיכתו לגיבור בלתי צפוי בעיני הסובבים אותו.
+    </string>
+    <string name="get_tickets">לרכישת כרטיסים</string>
+    <string name="adults">מבוגרים</string>
+    <string name="children">ילדים</string>
+    <string name="subtotal">סה"כ לתשלום</string>
+    <string name="specify_quant">מספר כרטיסים</string>
+    <string name="price">מבוגר: 5 ש"ח  |  ילד: 2 ש"ח</string>
+    <string name="currency">ש"ח</string>
+    <string name="pick_a_date">לחצו כדי לבחור תאריך</string>
+    <string name="checkout">לסיום הרכישה</string>
+    <string name="checkout_title">אישור הזמנה</string>
+    <string name="yes">אישור</string>
+    <string name="no">ביטול</string>
 </resources>

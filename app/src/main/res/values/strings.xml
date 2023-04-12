@@ -3,4 +3,19 @@
     <string name="my_name_is">My name is Forrest, Forrest Gump</string>
     <string name="run_forrest">Run Forrest, run!</string>
     <string name="creator">Tomer Leivy</string>
+    <string name="about">Forrest Gump is an absolutely incredible movie that takes you on an unforgettable journey through the life of a simple man with a big heart.\nYou\'ll laugh, you\'ll cry, and you\'ll cheer for Forrest as he navigates through life\'s many challenges and triumphs, all while becoming an unexpected hero in the eyes of those
+around him.\nForrest Gump is a timeless classic that will leave you feeling uplifted and inspired.</string>
+    <string name="get_tickets">Get Tickets</string>
+    <string name="specify_quant">Number of tickets</string>
+    <string name="price">Adult: 5$ | Child: 2$</string>
+    <string name="adults">Adults</string>
+    <string name="children">Children</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="currency">$</string>
+    <string name="pick_a_date">Pick a date</string>
+    <string name="checkout">Checkout</string>
+    <string name="checkout_title">Order Confirmation</string>
+    <string name="yes">Confirm</string>
+    <string name="no">Decline</string>
+
 </resources>
