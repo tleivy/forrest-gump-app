@@ -13,8 +13,9 @@
         android:gravity="center"
         android:layout_gravity="left"
         android:text="@string/run_forrest"
-        android:fontFamily="@font/western"
-        android:textSize="65sp"
+        android:fontFamily="@font/comforta"
+        android:textSize="40sp"
+        android:textStyle="bold"
         android:textColor="@color/forrest_art_pink"
         android:layout_marginTop="50dp"/>
 

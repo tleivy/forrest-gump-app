@@ -6,7 +6,7 @@ import android.widget.TextView
 import android.content.Intent
 import android.os.Handler
 import android.os.HandlerThread
-import android.view.animation.AnimationSet
+import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 
 class WelcomeActivity : AppCompatActivity() {
@@ -18,20 +18,42 @@ class WelcomeActivity : AppCompatActivity() {
             applicationContext,
             R.anim.rotate
         )
-        val slideIn = AnimationUtils.loadAnimation(
+        val slideOutAnim = AnimationUtils.loadAnimation(
             applicationContext,
             R.anim.slide_out
         )
-        val animationSet = AnimationSet(true)
-        animationSet.addAnimation(rotateAnim)
-        animationSet.addAnimation(slideIn)
+        val welcomeTitle = findViewById<TextView>(R.id.welcome_title)
 
+        rotateAnim.setAnimationListener(object: Animation.AnimationListener {
+            override fun onAnimationEnd(animation: Animation) {
+                welcomeTitle.startAnimation(slideOutAnim)
+            }
+            override fun onAnimationStart(animation: Animation) {
+                // Do nothing
+            }
+            override fun onAnimationRepeat(animation: Animation) {
+                // Do nothing
+            }
+        })
+
+        slideOutAnim.setAnimationListener(object: Animation.AnimationListener {
+            override fun onAnimationEnd(animation: Animation) {
+                welcomeTitle.text = ""
+            }
+            override fun onAnimationStart(animation: Animation) {
+                // Do nothing
+            }
+            override fun onAnimationRepeat(animation: Animation) {
+                // Do nothing
+            }
+        })
+
+        // Start animations chain
         val animThread = HandlerThread("animThread")
         animThread.start()
         Handler(animThread.looper).postDelayed({
-            findViewById<TextView>(R.id.welcome_title).startAnimation(animationSet)
-        }, 2000) // Delay for 2 seconds
-
+            welcomeTitle.startAnimation(rotateAnim)
+        }, 1000) // Delay for 1 second
 
         // Start the MainActivity after 4.6 seconds
         val mainActivityThread = HandlerThread("mainActivityThread")
@@ -40,6 +62,6 @@ class WelcomeActivity : AppCompatActivity() {
             val nextActivity = Intent(this, MainActivity::class.java)
             startActivity(nextActivity)
             finish()
-        }, 3300) // Delay for 3.3 seconds
+        }, 2000) // Delay for 2 seconds
     }
 }
