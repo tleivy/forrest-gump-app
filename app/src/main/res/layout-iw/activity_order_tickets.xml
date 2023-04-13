@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/forrest_main_art"
+    android:orientation="vertical"
+    android:padding="25dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/specify_quant"
+            android:fontFamily="@font/tahoma"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:fontFamily="@font/tahoma"
+            android:paddingTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="start">
+
+                <TextView
+                    android:id="@+id/adult_prompt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_gravity="center"
+                    android:text="@string/adults"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/tahoma"
+                    android:textColor="@color/black"/>
+
+                <NumberPicker
+                    android:id="@+id/adults_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:theme="@style/AppTheme.Picker"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/children_prompt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/children"
+                    android:textSize="13sp"
+                    android:paddingStart="10dp"
+                    android:fontFamily="@font/tahoma"
+                    android:textColor="@color/black"/>
+
+                <NumberPicker
+                    android:id="@+id/children_num"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:theme="@style/AppTheme.Picker"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/date_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/tahoma"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/pick_a_date"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="30dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:text="@string/subtotal"
+                android:fontFamily="@font/tahoma"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/tahoma"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:textSize="22sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="center"
+                    android:text="@string/currency"
+                    android:fontFamily="@font/tahoma"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="22sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/checkout_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/checkout"
+            android:fontFamily="@font/tahoma"
+            android:textSize="18sp"
+            android:background="@color/forrest_art_pink"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
