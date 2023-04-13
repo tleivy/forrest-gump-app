@@ -23,4 +23,6 @@
     <string name="order_summery">סיכום הזמנה</string>
     <string name="total_of">סה"כ לתשלום</string>
     <string name="conf_order">אנא אשרו את הזמנתכם</string>
+    <string name="thanks">תודה</string>
+    <string name="ok">OK</string>
 </resources>

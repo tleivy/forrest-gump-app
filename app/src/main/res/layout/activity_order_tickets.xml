@@ -20,8 +20,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/specify_quant"
-            android:fontFamily="@font/comforta"
-            android:textSize="16sp"
+            android:fontFamily="@font/opensans"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/black"/>
 
@@ -31,9 +31,8 @@
         android:text="@string/price"
         android:textColor="@color/black"
         android:layout_gravity="center"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:fontFamily="@font/comforta"
+        android:textSize="14sp"
+        android:fontFamily="@font/opensans"
         android:paddingTop="10dp"/>
 
         <LinearLayout
@@ -58,7 +57,7 @@
                 android:layout_gravity="center"
                 android:text="@string/adults"
                 android:textSize="13sp"
-                android:fontFamily="@font/comforta"
+                android:fontFamily="@font/opensans"
                 android:textColor="@color/black"/>
 
             <NumberPicker
@@ -87,7 +86,7 @@
                 android:text="@string/children"
                 android:textSize="13sp"
                 android:paddingStart="10dp"
-                android:fontFamily="@font/comforta"
+                android:fontFamily="@font/opensans"
                 android:textColor="@color/black"/>
 
         <NumberPicker
@@ -107,12 +106,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:fontFamily="@font/comforta"
+                android:fontFamily="@font/opensans"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="@string/pick_a_date"
-                android:textStyle="bold"
-                android:textSize="20sp"/>
+                android:textSize="24sp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -128,36 +126,33 @@
                 android:layout_gravity="start"
                 android:gravity="start"
                 android:text="@string/subtotal"
-                android:fontFamily="@font/comforta"
-                android:textSize="14sp"
+                android:fontFamily="@font/opensans"
+                android:textSize="16sp"
                 android:textColor="@color/black"/>
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
                     android:id="@+id/total_price"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_gravity="start"
-                    android:fontFamily="@font/comforta"
+                    android:fontFamily="@font/opensans"
                     android:textColor="@color/black"
                     android:gravity="center"
                     android:text="0"
                     android:textStyle="bold"
-                    android:textSize="16sp"/>
+                    android:textSize="22sp"/>
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:gravity="center"
                     android:text="@string/currency"
-                    android:fontFamily="@font/comforta"
+                    android:fontFamily="@font/opensans"
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:textSize="16sp"/>
+                    android:textSize="22sp"/>
         </LinearLayout>
 
         </LinearLayout>
@@ -167,7 +162,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/checkout"
-            android:fontFamily="@font/comforta"
+            android:fontFamily="@font/opensans"
+            android:textSize="25sp"
             android:background="@color/forrest_art_pink"/>
 
 

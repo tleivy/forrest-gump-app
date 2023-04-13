@@ -43,7 +43,7 @@ class OrderTickets : AppCompatActivity() {
         val dateButton = findViewById<TextView>(R.id.date_picker)
 
         val calendar = Calendar.getInstance()
-        val calendarListener = DatePickerDialog.OnDateSetListener {view, year, month, dayOfMonth ->
+        val calendarListener = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
             dateButton.text = "${dayOfMonth}/${month}/${year}"
         }
 
@@ -54,6 +54,7 @@ class OrderTickets : AppCompatActivity() {
             calendar.get(Calendar.MONTH),
             calendar.get(Calendar.DAY_OF_MONTH),
         )
+        datePickerDialog.datePicker.minDate = calendar.timeInMillis
 
         dateButton.setOnClickListener {
             datePickerDialog.show()
@@ -61,14 +62,6 @@ class OrderTickets : AppCompatActivity() {
 
         val mainActivity = Intent(this, MainActivity::class.java)
         val checkoutDialog: AlertDialog.Builder = AlertDialog.Builder(this)
-
-        checkoutDialog.apply {
-            setTitle(R.string.checkout_title)
-            setCancelable(false)
-            setIcon(R.drawable.check_icon)
-            setPositiveButton(R.string.yes) { _, _ -> startActivity(mainActivity) }
-            setNegativeButton(R.string.no) { _, _ -> } // Do nothing, return to order
-        }
 
         val checkoutButton = findViewById<Button>(R.id.checkout_btn)
         checkoutButton.setOnClickListener {
@@ -78,8 +71,12 @@ class OrderTickets : AppCompatActivity() {
         }
     }
 
-    fun popCheckoutAlert(dialog: AlertDialog.Builder, mainActivity: Intent, adultNum: Int,
-    childNum: Int) {
+    private fun popCheckoutAlert(
+        dialog: AlertDialog.Builder, mainActivity: Intent,
+        adultNum: Int, childNum: Int
+    ) {
+        /** This function pops a checkout dialog based on the order details. */
+
         val total = adultNum * 5 + childNum * 2
         val orderSummery = resources.getString(R.string.order_summery)
         val adults = resources.getString(R.string.adults)
@@ -90,19 +87,34 @@ class OrderTickets : AppCompatActivity() {
 
         val checkoutMsg = "${orderSummery}:\n" +
                 "${adultNum} ${adults}, ${childNum} ${children}\n" +
-                "${totalOf}: ${total} ${currency}.\n" +
+                "${totalOf}: ${total}${currency}.\n" +
                 "${orderConfirmation}."
+
+        val thanksDialog: AlertDialog.Builder = AlertDialog.Builder(this)
 
         dialog.apply {
             setTitle(R.string.checkout_title)
             setMessage(checkoutMsg)
             setCancelable(false)
             setIcon(R.drawable.check_icon)
-            setPositiveButton(R.string.yes) { _, _ -> startActivity(mainActivity) }
+
+            setPositiveButton(R.string.yes) { _, _ ->
+
+                thanksDialog.apply {
+                    setTitle(R.string.thanks)
+                    setMessage("")
+                    setCancelable(false)
+                    setIcon(R.drawable.check_icon)
+                    setPositiveButton(R.string.ok) { _, _ -> startActivity(mainActivity) }
+                    thanksDialog.create().show()
+
+                }
+
+            }
             setNegativeButton(R.string.no) { _, _ -> } // Do nothing, return to order
+
+            dialog.create().show()
         }
 
-        dialog.create().show()
     }
-
 }
