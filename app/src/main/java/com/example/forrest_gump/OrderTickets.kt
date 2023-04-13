@@ -72,13 +72,37 @@ class OrderTickets : AppCompatActivity() {
 
         val checkoutButton = findViewById<Button>(R.id.checkout_btn)
         checkoutButton.setOnClickListener {
-            if (dateButton.text.equals(R.string.pick_a_date)) {
-                println(dateButton.text)
-                println(R.string.pick_a_date)
-
+            if (dateButton.text.equals(resources.getString(R.string.pick_a_date))) {
                 datePickerDialog.show()
-            } else checkoutDialog.create().show()
+            } else popCheckoutAlert(checkoutDialog, mainActivity, adultNum, childNum)
         }
+    }
+
+    fun popCheckoutAlert(dialog: AlertDialog.Builder, mainActivity: Intent, adultNum: Int,
+    childNum: Int) {
+        val total = adultNum * 5 + childNum * 2
+        val orderSummery = resources.getString(R.string.order_summery)
+        val adults = resources.getString(R.string.adults)
+        val children = resources.getString(R.string.children)
+        val totalOf = resources.getString(R.string.total_of)
+        val currency = resources.getString(R.string.currency)
+        val orderConfirmation = resources.getString(R.string.conf_order)
+
+        val checkoutMsg = "${orderSummery}:\n" +
+                "${adultNum} ${adults}, ${childNum} ${children}\n" +
+                "${totalOf}: ${total} ${currency}.\n" +
+                "${orderConfirmation}."
+
+        dialog.apply {
+            setTitle(R.string.checkout_title)
+            setMessage(checkoutMsg)
+            setCancelable(false)
+            setIcon(R.drawable.check_icon)
+            setPositiveButton(R.string.yes) { _, _ -> startActivity(mainActivity) }
+            setNegativeButton(R.string.no) { _, _ -> } // Do nothing, return to order
+        }
+
+        dialog.create().show()
     }
 
 }

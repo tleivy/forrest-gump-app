@@ -17,5 +17,8 @@ around him.\nForrest Gump is a timeless classic that will leave you feeling upli
     <string name="checkout_title">Order Confirmation</string>
     <string name="yes">Confirm</string>
     <string name="no">Decline</string>
+    <string name="order_summery">Order Summery</string>
+    <string name="total_of">total of</string>
+    <string name="conf_order">Please confirm your order</string>
 
 </resources>
