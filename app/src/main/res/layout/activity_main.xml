@@ -30,7 +30,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="35dp"
         android:background="@color/forrest_art_pink"
-        android:paddingHorizontal="50dp"
+        android:paddingHorizontal="30dp"
         android:paddingVertical="10dp"/>
 
 </LinearLayout>
